@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Hello world';
+public myname = "Tirupathi"
+public cOne=true;
+public cTwo=true
+public color = 'red'
+  submitData(val){
+
+console.log(this.myname);
+  }
+
+  toggle(){
+this.cOne = !this.cOne;
+this.cTwo = !this.cTwo;
+
+  }
 }

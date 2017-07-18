@@ -1,3 +1,25 @@
-<h1>
-  {{title}}
-</h1>
+<div class='container'>
+  <div>
+    <form #regForm = "ngForm" (ngSubmit)="submitData(regForm.value)">
+    <label>FirstName</label>
+    <input type="text" name="fs" ngModel [(ngModel)] = 'myname'><br>
+    <p>{{myname}}</p><br>
+    <div ngModelGroup = "address">
+      <input type="text" name="add1" ><br>
+      
+      <input type="text" name="add2" ngModel><br>
+    </div><br>
+    <input type="submit">
+    </form>
+  </div>
+</div> <br>
+<div [ngSwitch] = "color">
+  <p *ngSwitchCase="'red'">this is red paragraph</p>
+  <p *ngSwitchCase="'blue'">this is blue paragraph</p>
+  <p *ngSwitchCase="'green'">this is greeen paragraph</p>
+  <p *ngSwitchDefault>Invalid color</p>
+</div><br>
+<div>
+  <p [ngClass]="{classOne:cOne,classTwo:cTwo}">HI Good Morning</p><br>
+  <button (click)="toggle()">Toggle</button>
+</div>
